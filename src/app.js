@@ -1,6 +1,6 @@
+require("dotenv/config");
+const db = require("./database/db");
 const app = require("./server");
 const port = 3000;
 
-app.listen(port, () => {
-	console.log(`Server run in http://localhost:${port}`);
-});
+db(app.listen(port));
